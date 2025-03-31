@@ -1,0 +1,18 @@
+# виртуальное окружение
+.venv
+
+# временные файлы Python
+__pycache__/
+*.pyc
+
+# Jupyter 
+.ipynb_checkpoints/
+
+# настройки VS Code 
+.vscode/
+
+/data/
+
+# Исключаем другие файлы или папки
+*.log
+.env
