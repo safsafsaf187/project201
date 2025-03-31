@@ -24,7 +24,7 @@ transform = transforms.Compose([
 def load_model():
     model = models.densenet121(weights=None) 
     model.classifier = torch.nn.Linear(model.classifier.in_features, len(CLASS_NAMES))
-    model.load_state_dict(torch.load(MODEL_PATH, map_location='cpu'))
+    model.load_state_dict(torch.load(MODEL_PATH, map_location='cpu', weights_only=False))
     model.eval()
     return model
 

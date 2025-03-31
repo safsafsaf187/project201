@@ -25,7 +25,7 @@ transform = transforms.Compose([
 def load_model():
     model = models.resnet18(weights=None)
     model.fc = torch.nn.Linear(model.fc.in_features, len(CLASS_NAMES))
-    model.load_state_dict(torch.load(MODEL_PATH, map_location='cpu'))
+    model.load_state_dict(torch.load(MODEL_PATH, map_location='cpu', weights_only=False))
     model.eval()
     return model
 
